@@ -5,7 +5,6 @@ import { router } from "./router.js";
 
 dotenv.config();
 
-const host = process.env.HOST ?? "localhost";
 const port = process.env.PORT || 3000;
 
 const app = express();

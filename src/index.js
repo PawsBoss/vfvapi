@@ -1,9 +1,6 @@
-import dotenv from "dotenv";
 import express, { json } from "express";
 import cors from "cors";
 import { router } from "./router.js";
-
-dotenv.config();
 
 const port = process.env.PORT || 3000;
 
@@ -19,8 +16,8 @@ app.get("/", (req, res) => {
 app.use("/api", router);
 
 export function startServer() {
-  app.listen(port, host, () => {
-    console.log(`[ ready ] http://${host}:${port}`);
+  app.listen(port, () => {
+    console.log(`[ ready ] http://0.0.0.0:${port}`);
   });
 }
 
